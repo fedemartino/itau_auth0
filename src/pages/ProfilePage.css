@@ -1,0 +1,184 @@
+.profile-page {
+  min-height: 100vh;
+  background: var(--itau-gray-50);
+}
+
+.profile-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* reuse spinner from callback */
+.callback-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--itau-gray-200);
+  border-top-color: var(--itau-orange);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.profile-main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* ── Header card ───────────────────────────────────────────── */
+.profile-header-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--itau-orange);
+  flex-shrink: 0;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--itau-gray-900);
+  margin-bottom: 4px;
+}
+
+.profile-email {
+  font-size: 0.88rem;
+  color: var(--itau-gray-400);
+  margin-bottom: 8px;
+}
+
+.profile-badge {
+  display: inline-block;
+  background: #E8F5E9;
+  color: #2E7D32;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.profile-logout { margin-left: auto; }
+
+/* ── Grid ──────────────────────────────────────────────────── */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.profile-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-card h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--itau-blue);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--itau-gray-200);
+}
+
+.profile-card--token { grid-column: 1 / -1; }
+
+/* ── Account rows ──────────────────────────────────────────── */
+.account-list { display: flex; flex-direction: column; gap: 12px; }
+
+.account-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--itau-gray-50);
+}
+
+.account-icon { font-size: 1.4rem; }
+
+.account-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.account-info strong { font-size: 0.88rem; font-weight: 600; }
+.account-info small { font-size: 0.78rem; color: var(--itau-gray-400); }
+
+.account-balance {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--itau-gray-900);
+}
+
+/* ── Activity rows ─────────────────────────────────────────── */
+.activity-list { display: flex; flex-direction: column; gap: 0; }
+
+.activity-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--itau-gray-100);
+}
+.activity-row:last-child { border-bottom: none; }
+
+.activity-icon { font-size: 1.2rem; }
+
+.activity-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.activity-info strong { font-size: 0.85rem; font-weight: 600; }
+.activity-info small { font-size: 0.75rem; color: var(--itau-gray-400); }
+
+.activity-amount {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.activity-amount.positive { color: #2E7D32; }
+.activity-amount.negative { color: #C62828; }
+
+/* ── Token card ────────────────────────────────────────────── */
+.token-note {
+  font-size: 0.82rem;
+  color: var(--itau-gray-400);
+  margin-bottom: 16px;
+}
+
+.token-json {
+  background: var(--itau-gray-900);
+  color: #A8FF78;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .profile-card--token { grid-column: 1; }
+}
