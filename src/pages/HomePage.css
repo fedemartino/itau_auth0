@@ -1,0 +1,230 @@
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--itau-blue) 0%, var(--itau-blue-lt) 60%, #0073C8 100%);
+  color: var(--white);
+  padding: 64px 24px;
+}
+
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.hero__title span { color: var(--itau-orange-lt); }
+
+.hero__subtitle {
+  font-size: 1.05rem;
+  opacity: .85;
+  max-width: 480px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero__ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ── Quick-login card ──────────────────────────────────────── */
+.quick-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  color: var(--itau-gray-900);
+}
+
+.quick-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--itau-blue);
+}
+
+.quick-card__option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--itau-gray-50);
+  border: 2px solid var(--itau-gray-200);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  text-align: left;
+  transition: all var(--transition);
+}
+
+.quick-card__option:hover {
+  border-color: var(--itau-orange);
+  background: #FFF5EE;
+}
+
+.quick-card__option-icon { font-size: 1.6rem; }
+
+.quick-card__option div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quick-card__option strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--itau-gray-900);
+}
+
+.quick-card__option small {
+  font-size: 0.8rem;
+  color: var(--itau-gray-400);
+}
+
+.quick-card__arrow {
+  font-size: 1.4rem;
+  color: var(--itau-orange);
+  font-weight: 700;
+}
+
+.quick-card__powered {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--itau-gray-200);
+  font-size: 0.75rem;
+  color: var(--itau-gray-400);
+}
+
+/* ── Features strip ────────────────────────────────────────── */
+.features {
+  background: var(--itau-gray-50);
+  padding: 56px 24px;
+}
+
+.features__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feature-item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  text-align: center;
+}
+
+.feature-item__icon { font-size: 2rem; display: block; margin-bottom: 12px; }
+
+.feature-item__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--itau-blue);
+  margin-bottom: 8px;
+}
+
+.feature-item__desc { font-size: 0.85rem; color: var(--itau-gray-700); line-height: 1.5; }
+
+/* ── Auth0 banner ──────────────────────────────────────────── */
+.auth0-banner {
+  padding: 64px 24px;
+  background: var(--white);
+}
+
+.auth0-banner__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.auth0-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFF0EB;
+  border: 1px solid #EB5424;
+  border-radius: 100px;
+  padding: 6px 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #EB5424;
+  margin-bottom: 24px;
+}
+
+.auth0-banner__inner h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--itau-blue);
+  margin-bottom: 16px;
+}
+
+.auth0-banner__inner p {
+  font-size: 0.95rem;
+  color: var(--itau-gray-700);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.auth0-banner__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 32px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--itau-gray-700);
+  margin: 0 auto 32px;
+  max-width: 480px;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.footer {
+  background: var(--itau-blue);
+  color: rgba(255,255,255,.7);
+  padding: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer__inner { max-width: 1200px; margin: 0 auto; }
+.footer__links { margin-top: 8px; }
+.footer__links a { color: var(--itau-orange-lt); }
+.footer__links a:hover { text-decoration: underline; }
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__card { display: none; }
+  .features__inner { grid-template-columns: 1fr 1fr; }
+  .auth0-banner__list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .features__inner { grid-template-columns: 1fr; }
+}

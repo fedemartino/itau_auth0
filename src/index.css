@@ -1,0 +1,42 @@
+/* ── Reset & Base ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Itaú brand colours */
+  --itau-orange:    #F76700;
+  --itau-orange-dk: #D45500;
+  --itau-orange-lt: #FF8C33;
+  --itau-blue:      #003F7E;
+  --itau-blue-lt:   #005FAD;
+  --itau-gray-50:   #F9F9F9;
+  --itau-gray-100:  #F0F0F0;
+  --itau-gray-200:  #E0E0E0;
+  --itau-gray-400:  #9E9E9E;
+  --itau-gray-700:  #4A4A4A;
+  --itau-gray-900:  #1A1A1A;
+  --white:          #FFFFFF;
+
+  /* Auth0 brand colour (shown on the badge) */
+  --auth0-black:    #1A1A1A;
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --shadow-md:  0 4px 20px rgba(0,0,0,.12);
+  --shadow-lg:  0 8px 40px rgba(0,0,0,.18);
+  --transition: 0.2s ease;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--white);
+  color: var(--itau-gray-900);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+input, select { font-family: inherit; }
